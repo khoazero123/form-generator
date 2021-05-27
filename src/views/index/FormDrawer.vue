@@ -4,7 +4,7 @@
       <div style="height:100%">
         <el-row style="height:100%;overflow:auto">
           <el-col :md="24" :lg="12" class="left-editor">
-            <div class="setting" title="资源引用" @click="showResource">
+            <div class="setting" title="Resource reference" @click="showResource">
               <el-badge :is-dot="!!resources.length" class="item">
                 <i class="el-icon-setting" />
               </el-badge>
@@ -40,19 +40,19 @@
             <div class="action-bar" :style="{'text-align': 'left'}">
               <span class="bar-btn" @click="runCode">
                 <i class="el-icon-refresh" />
-                刷新
+                Refresh
               </span>
               <span class="bar-btn" @click="exportFile">
                 <i class="el-icon-download" />
-                导出vue文件
+                Export Vue file
               </span>
               <span ref="copyBtn" class="bar-btn copy-btn">
                 <i class="el-icon-document-copy" />
-                复制代码
+                Copy code
               </span>
               <span class="bar-btn delete-btn" @click="$emit('update:visible', false)">
                 <i class="el-icon-circle-close" />
-                关闭
+                Close
               </span>
             </div>
             <iframe
@@ -135,15 +135,15 @@ export default {
       text: trigger => {
         const codeStr = this.generateCode()
         this.$notify({
-          title: '成功',
-          message: '代码已复制到剪切板，可粘贴。',
+          title: 'Success',
+          message: 'The code has been copied to the cutting board, which can be pasted.',
           type: 'success'
         })
         return codeStr
       }
     })
     clipboard.on('error', e => {
-      this.$message.error('代码复制失败')
+      this.$message.error('Code copy failed')
     })
   },
   beforeDestroy() {
@@ -214,8 +214,8 @@ export default {
         const astBody = ast.program.body
         if (astBody.length > 1) {
           this.$confirm(
-            'js格式不能识别，仅支持修改export default的对象内容',
-            '提示',
+            'The JS format cannot be identified, only support for the modification of the object content of Export Default.',
+            'prompt',
             {
               type: 'warning'
             }
@@ -240,10 +240,10 @@ export default {
             location.origin
           )
         } else {
-          this.$message.error('请使用export default')
+          this.$message.error('Please use export default')
         }
       } catch (err) {
-        this.$message.error(`js错误：${err}`)
+        this.$message.error(`JS error：${err}`)
         console.error(err)
       }
     },
@@ -254,10 +254,10 @@ export default {
       return beautifier.html(html + script + css, beautifierConf.html)
     },
     exportFile() {
-      this.$prompt('文件名:', '导出文件', {
+      this.$prompt('file name:', 'Export file', {
         inputValue: `${+new Date()}.vue`,
         closeOnClickModal: false,
-        inputPlaceholder: '请输入文件名'
+        inputPlaceholder: 'Please enter the file name'
       }).then(({ value }) => {
         if (!value) value = `${+new Date()}.vue`
         const codeStr = this.generateCode()

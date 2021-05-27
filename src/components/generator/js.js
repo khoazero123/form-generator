@@ -97,7 +97,7 @@ function callInCreated(methodName, created) {
   created.push(`this.${methodName}()`)
 }
 
-// 混入处理函数
+// Mixed processing function
 function mixinMethod(type) {
   const list = []; const
     minxins = {
@@ -105,7 +105,7 @@ function mixinMethod(type) {
         submitForm: `submitForm() {
         this.$refs['${confGlobal.formRef}'].validate(valid => {
           if(!valid) return
-          // TODO 提交表单
+          // TODO submit Form
         })
       },`,
         resetForm: `resetForm() {
@@ -155,8 +155,8 @@ function buildRules(scheme, ruleList) {
   if (ruleTrigger[config.tag]) {
     if (config.required) {
       const type = isArray(config.defaultValue) ? 'type: \'array\',' : ''
-      let message = isArray(config.defaultValue) ? `请至少选择一个${config.label}` : scheme.placeholder
-      if (message === undefined) message = `${config.label}不能为空`
+      let message = isArray(config.defaultValue) ? `Please choose at least one ${config.label}` : scheme.placeholder
+      if (message === undefined) message = `${config.label} can not be empty`
       rules.push(`{ required: true, ${type} message: '${message}', trigger: '${ruleTrigger[config.tag]}' }`)
     }
     if (config.regList && isArray(config.regList)) {
@@ -196,14 +196,14 @@ function buildBeforeUpload(scheme) {
   if (config.fileSize) {
     rightSizeCode = `let isRightSize = file.size / ${unitNum} < ${config.fileSize}
     if(!isRightSize){
-      this.$message.error('文件大小超过 ${config.fileSize}${config.sizeUnit}')
+      this.$message.error('File size exceeds ${config.fileSize}${config.sizeUnit}')
     }`
     returnList.push('isRightSize')
   }
   if (scheme.accept) {
     acceptCode = `let isAccept = new RegExp('${scheme.accept}').test(file.type)
     if(!isAccept){
-      this.$message.error('应该选择${scheme.accept}类型的文件')
+      this.$message.error('Should choose$ {scheme.accept} type file')
     }`
     returnList.push('isAccept')
   }
@@ -226,7 +226,7 @@ function buildSubmitUpload(scheme) {
 function buildOptionMethod(methodName, model, methodList, scheme) {
   const config = scheme.__config__
   const str = `${methodName}() {
-    // 注意：this.$axios是通过Vue.prototype.$axios = axios挂载产生的
+    // note：this.$axios Pass Vue.prototype.$axios = axios Mount
     this.$axios({
       method: '${config.method}',
       url: '${config.url}'

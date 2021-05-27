@@ -1,7 +1,7 @@
 export default [
   {
     __config__: {
-      label: '单行文本',
+      label: 'Single line of text',
       labelWidth: null,
       showLabel: true,
       changeTag: true,
@@ -12,19 +12,19 @@ export default [
       layout: 'colFormItem',
       span: 24,
       document: 'https://element.eleme.cn/#/zh-CN/component/input',
-      // 正则校验规则
+      // Regular verification rules
       regList: [{
         pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
         message: '手机号格式错误'
       }]
     },
-    // 组件的插槽属性
+    // Component's slot properties
     __slot__: {
       prepend: '',
       append: ''
     },
     __vModel__: 'mobile',
-    placeholder: '请输入手机号',
+    placeholder: 'Please enter phone number',
     style: { width: '100%' },
     clearable: true,
     'prefix-icon': 'el-icon-mobile',

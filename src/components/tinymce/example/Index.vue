@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Tinymce v-model="defaultValue" :height="300" placeholder="在这里输入文字" />
+    <Tinymce v-model="defaultValue" :height="300" placeholder="Enter text here" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      defaultValue: '<p>配置文档参阅：http://tinymce.ax-z.cn</p>'
+      defaultValue: '<p>Configuration documentation：http://tinymce.ax-z.cn</p>'
     }
   },
   computed: {

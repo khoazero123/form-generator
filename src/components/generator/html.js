@@ -8,8 +8,8 @@ export function dialogWrapper(str) {
   return `<el-dialog v-bind="$attrs" v-on="$listeners" @open="onOpen" @close="onClose" title="Dialog Titile">
     ${str}
     <div slot="footer">
-      <el-button @click="close">取消</el-button>
-      <el-button type="primary" @click="handelConfirm">确定</el-button>
+      <el-button @click="close">Cancel</el-button>
+      <el-button type="primary" @click="handelConfirm">Confirm</el-button>
     </div>
   </el-dialog>`
 }
@@ -56,8 +56,8 @@ function buildFromBtns(scheme, type) {
   let str = ''
   if (scheme.formBtns && type === 'file') {
     str = `<el-form-item size="large">
-          <el-button type="primary" @click="submitForm">提交</el-button>
-          <el-button @click="resetForm">重置</el-button>
+          <el-button type="primary" @click="submitForm">Submit</el-button>
+          <el-button @click="resetForm">Reset</el-button>
         </el-form-item>`
     if (someSpanIsNot24) {
       str = `<el-col :span="24">
@@ -369,7 +369,7 @@ function buildElUploadChild(scheme) {
   const config = scheme.__config__
   if (scheme['list-type'] === 'picture-card') list.push('<i class="el-icon-plus"></i>')
   else list.push(`<el-button size="small" type="primary" icon="el-icon-upload">${config.buttonText}</el-button>`)
-  if (config.showTip) list.push(`<div slot="tip" class="el-upload__tip">只能上传不超过 ${config.fileSize}${config.sizeUnit} 的${scheme.accept}文件</div>`)
+  if (config.showTip) list.push(`<div slot="tip" class="el-upload__tip">Can only be uploaded no more than ${config.fileSize}${config.sizeUnit} 的${scheme.accept}文件</div>`)
   return list.join('\n')
 }
 

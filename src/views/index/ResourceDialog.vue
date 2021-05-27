@@ -2,7 +2,7 @@
   <div>
     <el-dialog
       v-bind="$attrs"
-      title="外部资源引用"
+      title="External resource reference"
       width="600px"
       :close-on-click-modal="false"
       v-on="$listeners"
@@ -14,7 +14,7 @@
         :key="index"
         v-model="resources[index]"
         class="url-item"
-        placeholder="请输入 css 或 js 资源路径"
+        placeholder="Please enter a CSS or JS resource path"
         prefix-icon="el-icon-link"
         clearable
       >
@@ -42,18 +42,18 @@
           plain
           @click="addOne('')"
         >
-          添加其他
+          Add other
         </el-button>
       </el-button-group>
       <div slot="footer">
         <el-button @click="close">
-          取消
+          Close
         </el-button>
         <el-button
           type="primary"
           @click="handelConfirm"
         >
-          确定
+          Confirm
         </el-button>
       </div>
     </el-dialog>
@@ -97,7 +97,7 @@ export default {
     },
     addOne(url) {
       if (this.resources.indexOf(url) > -1) {
-        this.$message('资源已存在')
+        this.$message('Resources already exist')
       } else {
         this.resources.push(url)
       }

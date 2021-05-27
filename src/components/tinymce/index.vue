@@ -30,10 +30,10 @@ export default {
   mounted() {
     loadTinymce(tinymce => {
       // eslint-disable-next-line global-require
-      require('./zh_CN')
+      // require('./zh_CN')
       let conf = {
         selector: `#${this.tinymceId}`,
-        language: 'zh_CN',
+        language: 'en',
         menubar: 'file edit insert view format table',
         plugins,
         toolbar,

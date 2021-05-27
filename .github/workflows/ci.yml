@@ -14,12 +14,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     
-    - name: 打包构建
+    - name: Packaging construction
       run: |
         npm install
         npm run build
 
-    - name: 发布
+    - name: release
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

@@ -72,8 +72,8 @@ function renderFrom(h) {
 function formBtns(h) {
   return <el-col>
     <el-form-item size="large">
-      <el-button type="primary" onClick={this.submitForm}>提交</el-button>
-      <el-button onClick={this.resetForm}>重置</el-button>
+      <el-button type="primary" onClick={this.submitForm}>Submit</el-button>
+      <el-button onClick={this.resetForm}>Reset</el-button>
     </el-form-item>
   </el-col>
 }
@@ -86,7 +86,7 @@ function renderFormItem(h, elementList) {
     if (layout) {
       return layout.call(this, h, scheme)
     }
-    throw new Error(`没有与${config.layout}匹配的layout`)
+    throw new Error(`Not with ${config.layout} matched layout`)
   })
 }
 
@@ -152,9 +152,9 @@ export default {
             const required = { required: config.required, message: cur.placeholder }
             if (Array.isArray(config.defaultValue)) {
               required.type = 'array'
-              required.message = `请至少选择一个${config.label}`
+              required.message = `Please choose at least one ${config.label}`
             }
-            required.message === undefined && (required.message = `${config.label}不能为空`)
+            required.message === undefined && (required.message = `${config.label} can not be empty`)
             config.regList.push(required)
           }
           rules[cur.__vModel__] = config.regList.map(item => {

@@ -21,7 +21,7 @@ export default function loadMonaco(cb) {
   const loading = ELEMENT.Loading.service({
     fullscreen: true,
     lock: true,
-    text: '编辑器资源初始化中...',
+    text: 'Editor resource initialization...',
     spinner: 'el-icon-loading',
     background: 'rgba(255, 255, 255, 0.5)'
   })

@@ -4,19 +4,19 @@
       <div class="action-bar" :style="{'text-align': 'left'}">
         <span class="bar-btn" @click="refresh">
           <i class="el-icon-refresh" />
-          刷新
+          Refresh
         </span>
         <span ref="copyBtn" class="bar-btn copy-json-btn">
           <i class="el-icon-document-copy" />
-          复制JSON
+          Copy JSON
         </span>
         <span class="bar-btn" @click="exportJsonFile">
           <i class="el-icon-download" />
-          导出JSON文件
+          Export JSON file
         </span>
         <span class="bar-btn delete-btn" @click="$emit('update:visible', false)">
           <i class="el-icon-circle-close" />
-          关闭
+          Close
         </span>
       </div>
       <div id="editorJson" class="json-editor" />
@@ -53,15 +53,15 @@ export default {
     const clipboard = new ClipboardJS('.copy-json-btn', {
       text: trigger => {
         this.$notify({
-          title: '成功',
-          message: '代码已复制到剪切板，可粘贴。',
+          title: 'Success',
+          message: 'The code has been copied to the cutting board, which can be pasted.',
           type: 'success'
         })
         return this.beautifierJson
       }
     })
     clipboard.on('error', e => {
-      this.$message.error('代码复制失败')
+      this.$message.error('Code copy failed')
     })
   },
   beforeDestroy() {
@@ -104,10 +104,10 @@ export default {
       }
     },
     exportJsonFile() {
-      this.$prompt('文件名:', '导出文件', {
+      this.$prompt('file name:', 'Export file', {
         inputValue: `${+new Date()}.json`,
         closeOnClickModal: false,
-        inputPlaceholder: '请输入文件名'
+        inputPlaceholder: 'Please enter the file name'
       }).then(({ value }) => {
         if (!value) value = `${+new Date()}.json`
         const codeStr = this.jsonEditor.getValue()
@@ -120,8 +120,8 @@ export default {
         this.$emit('refresh', JSON.parse(this.jsonEditor.getValue()))
       } catch (error) {
         this.$notify({
-          title: '错误',
-          message: 'JSON格式错误，请检查',
+          title: 'Error',
+          message: 'JSON format error, please check',
           type: 'error'
         })
       }

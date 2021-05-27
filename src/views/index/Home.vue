@@ -45,19 +45,19 @@
     <div class="center-board">
       <div class="action-bar">
         <el-button icon="el-icon-video-play" type="text" @click="run">
-          运行
+          run
         </el-button>
         <el-button icon="el-icon-view" type="text" @click="showJson">
-          查看json
+          View JSON
         </el-button>
         <el-button icon="el-icon-download" type="text" @click="download">
-          导出vue文件
+          Export Vue file
         </el-button>
         <el-button class="copy-btn-main" icon="el-icon-document-copy" type="text" @click="copy">
-          复制代码
+          Copy code
         </el-button>
         <el-button class="delete-btn" icon="el-icon-delete" type="text" @click="empty">
-          清空
+          Empty
         </el-button>
       </div>
       <el-scrollbar class="center-scrollbar">
@@ -83,7 +83,7 @@
               />
             </draggable>
             <div v-show="!drawingList.length" class="empty-info">
-              从左侧拖入或点选组件进行表单设计
+              Drag in or point selection from the left side design
             </div>
           </el-form>
         </el-row>
@@ -112,7 +112,7 @@
     />
     <code-type-dialog
       :visible.sync="dialogVisible"
-      title="选择生成类型"
+      title="Select generated type"
       :show-file-name="showFileName"
       @confirm="generate"
     />
@@ -190,15 +190,15 @@ export default {
       saveIdGlobalDebounce: debounce(340, saveIdGlobal),
       leftComponents: [
         {
-          title: '输入型组件',
+          title: 'Input component',
           list: inputComponents
         },
         {
-          title: '选择型组件',
+          title: 'Selective component',
           list: selectComponents
         },
         {
-          title: '布局型组件',
+          title: 'Layout component',
           list: layoutComponents
         }
       ]
@@ -255,15 +255,15 @@ export default {
       text: trigger => {
         const codeStr = this.generateCode()
         this.$notify({
-          title: '成功',
-          message: '代码已复制到剪切板，可粘贴。',
+          title: 'Success',
+          message: 'The code has been copied to the cutting board, which can be pasted.',
           type: 'success'
         })
         return codeStr
       }
     })
     clipboard.on('error', e => {
-      this.$message.error('代码复制失败')
+      this.$message.error('Code copy failed')
     })
   },
   methods: {
@@ -377,7 +377,7 @@ export default {
       document.getElementById('copyNode').click()
     },
     empty() {
-      this.$confirm('确定要清空所有组件吗？', '提示', { type: 'warning' }).then(
+      this.$confirm('Do you have to clear all components?', 'prompt', { type: 'warning' }).then(
         () => {
           this.drawingList = []
           this.idGlobal = 100

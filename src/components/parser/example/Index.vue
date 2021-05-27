@@ -26,7 +26,7 @@ export default {
         fields: [
           {
             __config__: {
-              label: '单行文本',
+              label: 'Single line of text',
               labelWidth: null,
               showLabel: true,
               changeTag: true,
@@ -39,7 +39,7 @@ export default {
               regList: [
                 {
                   pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
-                  message: '手机号格式错误'
+                  message: 'Malformed phone number'
                 }
               ]
             },
@@ -48,7 +48,7 @@ export default {
               append: ''
             },
             __vModel__: 'mobile',
-            placeholder: '请输入手机号',
+            placeholder: 'Please enter phone number',
             style: {
               width: '100%'
             },
@@ -62,7 +62,7 @@ export default {
           },
           {
             __config__: {
-              label: '日期范围',
+              label: 'Date range',
               tag: 'el-date-picker',
               tagIcon: 'date-range',
               defaultValue: null,
@@ -82,9 +82,9 @@ export default {
               width: '100%'
             },
             type: 'daterange',
-            'range-separator': '至',
-            'start-placeholder': '开始日期',
-            'end-placeholder': '结束日期',
+            'range-separator': 'to',
+            'start-placeholder': 'start date',
+            'end-placeholder': 'End date',
             disabled: false,
             clearable: true,
             format: 'yyyy-MM-dd',
@@ -96,12 +96,12 @@ export default {
             __config__: {
               layout: 'rowFormItem',
               tagIcon: 'row',
-              label: '行容器',
+              label: 'Container',
               layoutTree: true,
               children: [
                 {
                   __config__: {
-                    label: '评分',
+                    label: 'Rate',
                     tag: 'el-rate',
                     tagIcon: 'rate',
                     defaultValue: 0,
@@ -138,7 +138,7 @@ export default {
           },
           {
             __config__: {
-              label: '按钮',
+              label: 'Button',
               showLabel: true,
               changeTag: true,
               labelWidth: null,
@@ -150,7 +150,7 @@ export default {
               renderKey: 1594288459289
             },
             __slot__: {
-              default: '测试按钮1'
+              default: 'Test button 1'
             },
             type: 'primary',
             icon: 'el-icon-search',
@@ -167,7 +167,7 @@ export default {
         __methods__: {
           clickTestButton1() {
             console.log(
-              `%c【测试按钮1】点击事件里可以访问当前表单：
+              `%c [Test button 1] Click on the event to access the current form：
                 1) formModel='formData', 所以this.formData可以拿到当前表单的model
                 2) formRef='elForm', 所以this.$refs.elForm可以拿到当前表单的ref(vue组件)
               `,
@@ -193,7 +193,7 @@ export default {
         fields: [
           {
             __config__: {
-              label: '单行文本',
+              label: 'Single line of text',
               labelWidth: null,
               showLabel: true,
               changeTag: true,
@@ -206,7 +206,7 @@ export default {
               regList: [
                 {
                   pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
-                  message: '手机号格式错误'
+                  message: 'Malformed phone number'
                 }
               ]
             },
@@ -215,7 +215,7 @@ export default {
               append: ''
             },
             __vModel__: 'mobile',
-            placeholder: '请输入手机号',
+            placeholder: 'Please enter phone number',
             style: {
               width: '100%'
             },
@@ -229,7 +229,7 @@ export default {
           },
           {
             __config__: {
-              label: '日期范围',
+              label: 'Date range',
               tag: 'el-date-picker',
               tagIcon: 'date-range',
               defaultValue: null,
@@ -249,9 +249,9 @@ export default {
               width: '100%'
             },
             type: 'daterange',
-            'range-separator': '至',
-            'start-placeholder': '开始日期',
-            'end-placeholder': '结束日期',
+            'range-separator': 'to',
+            'start-placeholder': 'start date',
+            'end-placeholder': 'End date',
             disabled: false,
             clearable: true,
             format: 'yyyy-MM-dd',
