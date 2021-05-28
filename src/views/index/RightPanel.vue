@@ -777,7 +777,7 @@ export default {
     documentLink() {
       return (
         this.activeData.__config__.document
-        || 'https://element.eleme.cn/#/zh-CN/component/installation'
+        || 'https://element.eleme.cn/#/en-US/component/installation'
       )
     },
     dateOptions() {

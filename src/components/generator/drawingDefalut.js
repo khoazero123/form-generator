@@ -11,11 +11,11 @@ export default [
       required: true,
       layout: 'colFormItem',
       span: 24,
-      document: 'https://element.eleme.cn/#/zh-CN/component/input',
+      document: 'https://element.eleme.cn/#/en-US/component/input',
       // Regular verification rules
       regList: [{
         pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
-        message: '手机号格式错误'
+        message: 'Malformed phone number'
       }]
     },
     // Component's slot properties

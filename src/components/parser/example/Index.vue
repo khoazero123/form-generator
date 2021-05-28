@@ -35,7 +35,7 @@ export default {
               required: true,
               layout: 'colFormItem',
               span: 24,
-              document: 'https://element.eleme.cn/#/zh-CN/component/input',
+              document: 'https://element.eleme.cn/#/en-US/component/input',
               regList: [
                 {
                   pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
@@ -74,7 +74,7 @@ export default {
               regList: [],
               changeTag: true,
               document:
-                'https://element.eleme.cn/#/zh-CN/component/date-picker',
+                'https://element.eleme.cn/#/en-US/component/date-picker',
               formId: 101,
               renderKey: 1585980082729
             },
@@ -112,7 +112,7 @@ export default {
                     required: true,
                     regList: [],
                     changeTag: true,
-                    document: 'https://element.eleme.cn/#/zh-CN/component/rate',
+                    document: 'https://element.eleme.cn/#/en-US/component/rate',
                     formId: 102,
                     renderKey: 1586839671259
                   },
@@ -125,7 +125,7 @@ export default {
                   __vModel__: 'field102'
                 }
               ],
-              document: 'https://element.eleme.cn/#/zh-CN/component/layout',
+              document: 'https://element.eleme.cn/#/en-US/component/layout',
               formId: 101,
               span: 24,
               renderKey: 1586839668999,
@@ -146,7 +146,7 @@ export default {
               tagIcon: 'button',
               span: 24,
               layout: 'colFormItem',
-              document: 'https://element.eleme.cn/#/zh-CN/component/button',
+              document: 'https://element.eleme.cn/#/en-US/component/button',
               renderKey: 1594288459289
             },
             __slot__: {
@@ -202,7 +202,7 @@ export default {
               required: true,
               layout: 'colFormItem',
               span: 24,
-              document: 'https://element.eleme.cn/#/zh-CN/component/input',
+              document: 'https://element.eleme.cn/#/en-US/component/input',
               regList: [
                 {
                   pattern: '/^1(3|4|5|7|8|9)\\d{9}$/',
@@ -241,7 +241,7 @@ export default {
               regList: [],
               changeTag: true,
               document:
-                'https://element.eleme.cn/#/zh-CN/component/date-picker',
+                'https://element.eleme.cn/#/en-US/component/date-picker',
               formId: 101,
               renderKey: 1585980082729
             },

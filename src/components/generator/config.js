@@ -1,4 +1,4 @@
-// 表单属性【右面板】
+// Forms attribute [right panel]
 export const formConf = {
   formRef: 'elForm',
   formModel: 'formData',
@@ -12,12 +12,12 @@ export const formConf = {
   formBtns: true
 }
 
-// 输入型组件 【左面板】
+// Input component [left panel]
 export const inputComponents = [
   {
-    // 组件的自定义配置
+    // Component's custom configuration
     __config__: {
-      label: '单行文本',
+      label: 'Single line of text',
       labelWidth: null,
       showLabel: true,
       changeTag: true,
@@ -27,17 +27,17 @@ export const inputComponents = [
       required: true,
       layout: 'colFormItem',
       span: 24,
-      document: 'https://element.eleme.cn/#/zh-CN/component/input',
-      // 正则校验规则
+      document: 'https://element.eleme.cn/#/en-US/component/input',
+      // Regular verification rules
       regList: []
     },
-    // 组件的插槽属性
+    // Component's slot properties
     __slot__: {
       prepend: '',
       append: ''
     },
-    // 其余的为可直接写在组件标签上的属性
-    placeholder: '请输入',
+    // The rest are attributes that can be written directly on the component label
+    placeholder: 'please enter',
     style: { width: '100%' },
     clearable: true,
     'prefix-icon': '',
@@ -60,7 +60,7 @@ export const inputComponents = [
       span: 24,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/input'
+      document: 'https://element.eleme.cn/#/en-US/component/input'
     },
     type: 'textarea',
     placeholder: 'Please enter',
@@ -87,7 +87,7 @@ export const inputComponents = [
       span: 24,
       required: true,
       regList: [],
-      document: 'https://element.eleme.cn/#/zh-CN/component/input'
+      document: 'https://element.eleme.cn/#/en-US/component/input'
     },
     __slot__: {
       prepend: '',
@@ -117,7 +117,7 @@ export const inputComponents = [
       layout: 'colFormItem',
       required: true,
       regList: [],
-      document: 'https://element.eleme.cn/#/zh-CN/component/input-number'
+      document: 'https://element.eleme.cn/#/en-US/component/input-number'
     },
     placeholder: '',
     min: undefined,
@@ -145,11 +145,11 @@ export const inputComponents = [
     },
     placeholder: 'please enter',
     height: 300, // Editor height
-    branding: false // 隐藏右下角品牌烙印
+    branding: false // Hide in the lower right corner brand brand
   }
 ]
 
-// 选择型组件 【左面板】
+// Select component [left panel]
 export const selectComponents = [
   {
     __config__: {
@@ -163,7 +163,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/select'
+      document: 'https://element.eleme.cn/#/en-US/component/select'
     },
     __slot__: {
       options: [{
@@ -199,7 +199,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/cascader'
+      document: 'https://element.eleme.cn/#/en-US/component/cascader'
     },
     options: [{
       id: 1,
@@ -242,7 +242,7 @@ export const selectComponents = [
       regList: [],
       required: true,
       border: false,
-      document: 'https://element.eleme.cn/#/zh-CN/component/radio'
+      document: 'https://element.eleme.cn/#/en-US/component/radio'
     },
     __slot__: {
       options: [{
@@ -272,7 +272,7 @@ export const selectComponents = [
       regList: [],
       changeTag: true,
       border: false,
-      document: 'https://element.eleme.cn/#/zh-CN/component/checkbox'
+      document: 'https://element.eleme.cn/#/en-US/component/checkbox'
     },
     __slot__: {
       options: [{
@@ -302,7 +302,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/switch'
+      document: 'https://element.eleme.cn/#/en-US/component/switch'
     },
     style: {},
     disabled: false,
@@ -326,7 +326,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/slider'
+      document: 'https://element.eleme.cn/#/en-US/component/slider'
     },
     disabled: false,
     min: 0,
@@ -348,7 +348,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/time-picker'
+      document: 'https://element.eleme.cn/#/en-US/component/time-picker'
     },
     placeholder: 'please choose',
     style: { width: '100%' },
@@ -362,7 +362,7 @@ export const selectComponents = [
   },
   {
     __config__: {
-      label: 'time limit',
+      label: 'Time range',
       tag: 'el-time-picker',
       tagIcon: 'time-range',
       span: 24,
@@ -373,7 +373,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/time-picker'
+      document: 'https://element.eleme.cn/#/en-US/component/time-picker'
     },
     style: { width: '100%' },
     disabled: false,
@@ -398,7 +398,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/date-picker'
+      document: 'https://element.eleme.cn/#/en-US/component/date-picker'
     },
     placeholder: 'please choose',
     type: 'date',
@@ -422,7 +422,7 @@ export const selectComponents = [
       layout: 'colFormItem',
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/date-picker'
+      document: 'https://element.eleme.cn/#/en-US/component/date-picker'
     },
     style: { width: '100%' },
     type: 'daterange',
@@ -448,7 +448,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/rate'
+      document: 'https://element.eleme.cn/#/en-US/component/rate'
     },
     style: {},
     max: 5,
@@ -470,7 +470,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/color-picker'
+      document: 'https://element.eleme.cn/#/en-US/component/color-picker'
     },
     'show-alpha': false,
     'color-format': '',
@@ -494,7 +494,7 @@ export const selectComponents = [
       changeTag: true,
       fileSize: 2,
       sizeUnit: 'MB',
-      document: 'https://element.eleme.cn/#/zh-CN/component/upload'
+      document: 'https://element.eleme.cn/#/en-US/component/upload'
     },
     __slot__: {
       'list-type': true
@@ -517,7 +517,7 @@ export const layoutComponents = [
       tagIcon: 'row',
       label: 'Container',
       layoutTree: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/layout#row-attributes'
+      document: 'https://element.eleme.cn/#/en-US/component/layout#row-attributes'
     },
     type: 'default',
     justify: 'start',
@@ -533,7 +533,7 @@ export const layoutComponents = [
       tagIcon: 'button',
       span: 24,
       layout: 'colFormItem',
-      document: 'https://element.eleme.cn/#/zh-CN/component/button'
+      document: 'https://element.eleme.cn/#/en-US/component/button'
     },
     __slot__: {
       default: 'Main button'
@@ -551,7 +551,7 @@ export const layoutComponents = [
       layout: 'colFormItem',
       tagIcon: 'table',
       tag: 'el-table',
-      document: 'https://element.eleme.cn/#/zh-CN/component/table',
+      document: 'https://element.eleme.cn/#/en-US/component/table',
       span: 24,
       formId: 101,
       renderKey: 1595761764203,
