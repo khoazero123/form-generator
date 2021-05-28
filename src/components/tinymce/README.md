@@ -1,3 +1,3 @@
-## 简介
-富文本编辑器tinymce的一个vue版本封装。使用cdn动态脚本引入的方式加载。
+## Introduction
+An Vue version package of the rich text editor Tinymce.Loaded by using CDN dynamic scripts.
 
